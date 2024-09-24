@@ -20,7 +20,7 @@ def home():
 @app.route('/users', methods=['GET', 'POST'])
 def users():
     if request.method == 'GET':
-        users = list(users_collection.find({}, {'_id': 0})) 
+        users = list(users_collection.find({}, {'_id': 0}))  # Exclude _id field
         return jsonify(users)
     elif request.method == 'POST':
         new_user = request.json
