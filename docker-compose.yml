@@ -1,0 +1,10 @@
+
+services:
+  flask:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI=mongodb+srv://a3emond:Baddemon665@cluster0.pcdmi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+    volumes:
+      - .:/app
